@@ -1,0 +1,15 @@
+<template>
+  <lightning-card
+    title="Branch Object Record Form"
+    icon-name="standard:custom19"
+  >
+    <div class="slds-m-around_medium">
+      <lightning-record-form
+        object-api-name={objectName}
+        fields={fields}
+        columns="2"
+        onsuccess={showToast}
+      ></lightning-record-form>
+    </div>
+  </lightning-card>
+</template>

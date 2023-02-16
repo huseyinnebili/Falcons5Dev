@@ -1,0 +1,9 @@
+<template>
+  <lightning-card title="My Favourite Cars">
+    <div class="slds-m-around_medium">
+      <template for:each={myFavouriteCars} for:item="myFavouriteCar">
+        <div key={myFavouriteCar}>{myFavouriteCar}</div>
+      </template>
+    </div>
+  </lightning-card>
+</template>

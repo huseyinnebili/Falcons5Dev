@@ -1,0 +1,14 @@
+<template>
+  <lightning-card title="Search Opp Via Stage Picklist">
+    <div class="slds-m-around_medium">
+      <lightning-combobox
+        label="Select Any Option From Stage Picklist"
+        options={stageOptions}
+        value={selectedStage}
+        onchange={changeHandler}
+      ></lightning-combobox>
+
+      <c-display-results results={opps} columns={columns}> </c-display-results>
+    </div>
+  </lightning-card>
+</template>

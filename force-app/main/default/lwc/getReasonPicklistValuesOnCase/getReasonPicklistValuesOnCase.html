@@ -1,0 +1,20 @@
+<template>
+  <lightning-card
+    title="Get Reason Picklist Value : Case Object"
+    icon-name="standard:case"
+  >
+    <div class="slds-m-around_medium">
+      <lightning-combobox
+        name="progress"
+        label="Reason"
+        value={value}
+        placeholder="-Select-"
+        options={reasonOptions}
+        onchange={handleChange}
+      ></lightning-combobox>
+      <div class="slds-m-top_small">
+        <p>Selected value is: <strong>{value}</strong></p>
+      </div>
+    </div>
+  </lightning-card>
+</template>

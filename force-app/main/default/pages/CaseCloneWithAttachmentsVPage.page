@@ -1,0 +1,28 @@
+<apex:page standardController="Case"
+           extensions="CloneWithAttachment"
+            action="{!cloneWithItems}">
+            <apex:includeScript value="/support/console/57.0/integration.js"/>
+    <script type="text/javascript">
+    var output = '{!newRecordId}';
+    var oldoutput = '{!oldRecordId}';
+            //First find the ID of the primary tab to put the new subtab in
+            sforce.console.getEnclosingPrimaryTabId(openSubtab);
+    alert(openSubtab);
+        
+        var openSubtab = function openSubtab(result) {
+            //Now that we have the primary tab ID, we can open a new subtab in it
+            var primaryTabId = result.id;
+            sforce.console.openSubtab(primaryTabId , '/'+output, false, 
+                'salesforce', null, openSuccess, 'salesforceSubtab');
+        };
+        
+        var openSuccess = function openSuccess(result) {
+            //Report whether we succeeded in opening the subtab
+            if (result.success == true) {
+                alert('subtab successfully opened');
+            } else {
+                alert('subtab cannot be opened');
+            }
+        };
+    </script>
+</apex:page>

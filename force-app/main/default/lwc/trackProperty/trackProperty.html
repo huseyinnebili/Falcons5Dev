@@ -1,0 +1,17 @@
+<template>
+  <lightning-card title="Track Property">
+    <div class="slds-m-around_medium">
+      <lightning-input
+        type="text"
+        value={contact.state}
+        onkeyup={handleChange}
+        label="Enter Steve's state"
+      >
+      </lightning-input>
+
+      <div class="slds-m-top_small">
+        {contact.name} lives in {contact.state}.
+      </div>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,30 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Custom Account List View">
+        <div slot="actions">
+            <lightning-button label="Create Contact" onclick={navigateToNewRecordPAge}></lightning-button>
+
+            <lightning-button label="Delete Selected Contacts" onclick={deleteSelectedContacts}>
+
+            </lightning-button>
+
+
+        </div>
+        <div class="slds-card__body_inner slds-p-left_medium">
+            <p>Selected Contacts:{selectedContactsLen}</p>
+
+            <div class="slds-grid slds-gutters slds-p-bottom_x-small slds-p-left_medium">
+                <lightning-input type="'search" onchange={handleSeach}></lightning-input>
+
+            </div>
+
+            <template if:true={accObj.data}>
+                <lightning-datatable key-field="Id" data={accObj.data} columns={columns} onsave={saveHandleAction}
+                    draft-values={fldsItemValues} onrowselection={handleRowSelection} hide-checkbox-column
+                    onrowaction={handleRowAction} show-row-number-column>
+                </lightning-datatable>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

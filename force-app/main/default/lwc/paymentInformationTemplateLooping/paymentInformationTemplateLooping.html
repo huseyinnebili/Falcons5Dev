@@ -1,0 +1,13 @@
+<template>
+  <lightning-card title="Payment Information">
+    <div class="slds-m-around_medium">
+      <template for:each={payments} for:item="payment">
+        <div key={payment.id} class="slds-m-bottom_small">
+          <strong>Type:</strong>{payment.type} <br />
+          <strong>Amount:</strong>{payment.amount} <br />
+          <strong>Paid?:</strong>{payment.paid}
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,33 @@
+<template>
+  <lightning-card
+    title="Case Object Record View Form"
+    icon-name="standard:case"
+  >
+    <div class="slds-m-around_medium">
+      <template if:true={showCase}>
+        <lightning-record-view-form
+          object-api-name={objectApiName}
+          record-id={recordId}
+        >
+          <lightning-output-field
+            field-name={fields.Origin}
+          ></lightning-output-field>
+          <lightning-output-field
+            field-name={fields.Reason}
+          ></lightning-output-field>
+          <lightning-output-field
+            field-name={fields.PotentialLiability}
+          ></lightning-output-field>
+          <lightning-output-field
+            field-name={fields.Type}
+          ></lightning-output-field>
+          <lightning-output-field
+            field-name={fields.Status}
+          ></lightning-output-field>
+          <lightning-output-field
+            field-name={fields.ProductId}
+          ></lightning-output-field> </lightning-record-view-form
+      ></template>
+    </div>
+  </lightning-card>
+</template>

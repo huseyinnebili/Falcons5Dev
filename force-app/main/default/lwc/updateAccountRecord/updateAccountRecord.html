@@ -1,0 +1,40 @@
+<template>
+  <lightning-card title="Update Account Record" icon-name="standard:account">
+    <div class="slds-m-around_medium">
+      <form class="accountRecord">
+        <lightning-input
+          label="Account Name"
+          name="Name"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <lightning-input
+          label="Phone"
+          name="Phone"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <lightning-input
+          label="Annual Revenue"
+          name="AnnualRevenue"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <lightning-input
+          label="Account Number"
+          name="AccountNumber"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <div class="slds-m-top_medium slds-align_absolute-center">
+          <lightning-button
+            label="Save Contact"
+            variant="brand"
+            onclick={updateAccount}
+          >
+          </lightning-button>
+        </div>
+      </form>
+    </div>
+  </lightning-card>
+</template>

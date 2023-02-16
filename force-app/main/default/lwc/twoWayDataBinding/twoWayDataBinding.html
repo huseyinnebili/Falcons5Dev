@@ -1,0 +1,19 @@
+<template>
+    
+    <lightning-card title="Two Way Data Binding">
+
+        <div class ='slds-m-around_medium'>
+
+            <lightning-input 
+           
+            type="text" 
+            label="Enter your title" 
+            onkeyup={handleChange}
+            value={title}> 
+        
+        </lightning-input>
+            <div>My name is {name} ,and title is {title}</div>
+
+        </div>
+    </lightning-card>
+</template>

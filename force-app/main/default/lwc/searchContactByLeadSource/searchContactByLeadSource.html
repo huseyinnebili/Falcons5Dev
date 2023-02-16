@@ -1,0 +1,26 @@
+<template>
+  <lightning-card title="Search Contact Record By Lead Source Picklist">
+    <div class="slds-m-around_medium">
+      <lightning-input
+        name="enter-search"
+        label="Enter a Lead Source option for starting the search"
+        type="search"
+        value={searchWord}
+        onkeyup={searchHandler}
+      ></lightning-input>
+
+      <template if:true={contacts}>
+        <div><strong>Search Results : </strong></div>
+        <template for:each={contacts} for:item="conn">
+          <div key={conn.Id} class="slds-m-bottom_small">
+            <strong>Lead Source : </strong>{conn.LeadSource}<br />
+            <strong>Last Name : </strong>{conn.LastName}<br />
+            <strong>Phone : </strong>{conn.Phone}<br />
+            <strong>Email : </strong>{conn.Email}<br />
+            <strong>Status : </strong>{conn.Status__c}<br />
+          </div>
+        </template>
+      </template>
+    </div>
+  </lightning-card>
+</template>

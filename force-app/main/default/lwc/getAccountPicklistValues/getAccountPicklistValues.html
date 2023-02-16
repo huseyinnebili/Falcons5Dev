@@ -1,0 +1,17 @@
+<template>
+  <lightning-card title="Contract Picklist Values">
+    <div class="slds-m-around_medium">
+      <template if:true={IndustryPicklistValues.data}>
+        <lightning-combobox
+          name="progress"
+          label="Status"
+          value={value}
+          placeholder="-Select-"
+          options={statusPicklistValues.data.values}
+          onchange={handleChange}
+        >
+        </lightning-combobox>
+      </template>
+    </div>
+  </lightning-card>
+</template>

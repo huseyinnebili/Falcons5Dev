@@ -1,0 +1,5 @@
+<apex:page standardController="Account"
+extensions="AccountCloneWithItemController"
+action="{!cloneWithItems}">
+ <apex:messages />
+</apex:page>

@@ -1,0 +1,45 @@
+<template>
+  <lightning-card title="Update Record : Case" icon-name="standard:case">
+    <div class="slds-m-around_medium">
+      <form class="updateCase">
+        <lightning-input
+          label="Case Origin"
+          name="Origin"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <lightning-input
+          label="Account Name"
+          name="AccountId"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <lightning-input
+          label="Case Reason"
+          name="Reason"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <lightning-input
+          label="Description"
+          name="Description"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <lightning-input
+          label="Priority"
+          name="Priority"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <div class="slds-m-top_medium slds-align_absolute-center">
+          <lightning-button
+            variant="brand"
+            label="Save Case"
+            onclick={updateCaseRecord}
+          ></lightning-button>
+        </div>
+      </form>
+    </div>
+  </lightning-card>
+</template>

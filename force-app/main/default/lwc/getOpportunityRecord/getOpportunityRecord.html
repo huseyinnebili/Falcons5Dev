@@ -1,0 +1,14 @@
+<template>
+  <lightning-card
+    title="Get Records : Opportunity"
+    icon-name="standard:opportunity"
+  >
+    <div class="slds-m-around_medium">
+      <lightning-datatable
+        key-field="Id"
+        data={opportunities.data}
+        columns={columns}
+      ></lightning-datatable>
+    </div>
+  </lightning-card>
+</template>

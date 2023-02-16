@@ -1,0 +1,13 @@
+<template>
+  <lightning-card title="Record Form New : Case" icon-name="standard:case">
+    <div class="slds-m-around_medium">
+      <lightning-record-form
+        object-api-name={objectApiName}
+        record-id={recordId}
+        fields={fields}
+        onsuccess={showToast}
+      >
+      </lightning-record-form>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,55 @@
+<template>
+  <lightning-card title="My Personal Info Chart">
+    <div class="slds-m-around_medium">
+      <lightning-button
+        value="brand"
+        variant="brand"
+        onclick={handleClick}
+        label="Show Content"
+      >
+      </lightning-button>
+
+      <template if:true={showContent}>
+        <div class="slds-m-top_large">
+          <lightning-input
+            type="text"
+            label="Enter your first name."
+            onkeyup={handleChangeFirstName}
+            value={myInfo.firstName}
+          >
+          </lightning-input>
+
+          <lightning-input
+            type="text"
+            label="Enter your last name."
+            onkeyup={handleChangeLastName}
+            value={myInfo.lastName}
+          >
+          </lightning-input>
+          <lightning-input
+            type="text"
+            label="Enter your age."
+            onkeyup={handleChangeAge}
+            value={myInfo.age}
+          >
+          </lightning-input>
+          <lightning-input
+            type="text"
+            label="Enter your state."
+            onkeyup={handleChangeState}
+            value={myInfo.state}
+          >
+          </lightning-input>
+
+          My first name is {myInfo.firstName },and last name is
+          {myInfo.lastName} .
+          <br />
+
+          I am {myInfo.age} years old.
+          <br />
+          I live in {myInfo.state}.
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>

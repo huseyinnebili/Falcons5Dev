@@ -1,0 +1,24 @@
+<template>
+  <lightning-card title="Search Contact By Status Picklist">
+    <div class="slds-m-around_medium">
+      <lightning-combobox
+        label="Select a rating value to access to any Account Record related to it"
+        value={selectedStatus}
+        options={statusOptions}
+        onchange={changeHandler}
+      ></lightning-combobox>
+      <template if:true={contacts}>
+        <strong>SEARCH RESULT : </strong>
+        <template for:each={contacts} for:item="conn">
+          <div key={conn.id} class="slds-m-bottom_small">
+            <strong>Lead Source : </strong>{conn.LeadSource}<br />
+            <strong>Last Name : </strong>{conn.LastName}<br />
+            <strong>Phone : </strong>{conn.Phone}<br />
+            <strong>Email : </strong>{conn.Email}<br />
+            <strong>Status : </strong>{conn.Status__c}<br />
+          </div>
+        </template>
+      </template>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,28 @@
+<template>
+  <lightning-card title="Edit Case Record" icon-name="standard:case">
+    <div class="slds-m-around_medium">
+      <lightning-record-view-form
+        object-api-name={objectApiName}
+        record-id={recordId}
+      >
+        <template if:true={showContent}>
+          <lightning-output-field
+            field-name={fields.subject}
+          ></lightning-output-field>
+          <lightning-output-field
+            field-name={fields.status}
+          ></lightning-output-field>
+          <lightning-output-field
+            field-name={fields.priority}
+          ></lightning-output-field>
+          <lightning-output-field
+            field-name={fields.origin}
+          ></lightning-output-field>
+          <lightning-output-field
+            field-name={fields.account}
+          ></lightning-output-field
+        ></template>
+      </lightning-record-view-form>
+    </div>
+  </lightning-card>
+</template>

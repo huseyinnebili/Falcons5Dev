@@ -1,0 +1,24 @@
+<template>
+  <lightning-card
+    title="Delete Record : Opportunity "
+    icon-name="standard:opportunity"
+  >
+    <div class="slds-m-around_medium">
+      <form class="oppRecord">
+        <lightning-input
+          type="text"
+          label="Enter the record in order to get it deleted"
+          value={recordId}
+          onchange={changeHandler}
+          class="slds-m-bottom_small"
+        ></lightning-input>
+
+        <lightning-button
+          variant="destructive"
+          label="Delete"
+          onclick={deleteRec}
+        ></lightning-button>
+      </form>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,31 @@
+<template>
+  <lightning-card title="Branch Record View Form" icon-name="standard:custom19">
+    <div class="slds-m-around_medium">
+      <lightning-record-view-form
+        record-id={recordId}
+        object-api-name={objectName}
+        columns="2"
+      >
+        <lightning-messages></lightning-messages>
+        <lightning-output-field
+          field-name={fields.branchName}
+        ></lightning-output-field>
+        <lightning-output-field
+          field-name={fields.hodName}
+        ></lightning-output-field>
+        <lightning-output-field
+          field-name={fields.hodPhone}
+        ></lightning-output-field>
+        <lightning-output-field
+          field-name={fields.registrationConfirmation}
+        ></lightning-output-field>
+        <lightning-output-field
+          field-name={fields.branchFee}
+        ></lightning-output-field>
+        <lightning-output-field
+          field-name={fields.branchRegDueDate}
+        ></lightning-output-field>
+      </lightning-record-view-form>
+    </div>
+  </lightning-card>
+</template>

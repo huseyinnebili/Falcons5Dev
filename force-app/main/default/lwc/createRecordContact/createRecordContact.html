@@ -1,0 +1,54 @@
+<template>
+  <lightning-card title="Create Record : Contact" icon-name="standard:contact">
+    <div class="slds-m-around_medium">
+      <form class="contactform">
+        <lightning-input
+          label="First Name"
+          name="FirstName"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <lightning-input
+          label="Last Name"
+          name="LastName"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <lightning-input
+          label="Title"
+          name="Title"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <lightning-input
+          label="Email"
+          name="Email"
+          type="email"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <lightning-input
+          label="Department"
+          name="Department"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <lightning-input
+          label="Birthdate"
+          name="Birthdate"
+          type="date"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <div class="slds-m-top_medium slds-align_absolute-center">
+          <lightning-button
+            label="Save Contact"
+            variant="brand"
+            onclick={createContact}
+          >
+          </lightning-button>
+        </div>
+      </form>
+    </div>
+  </lightning-card>
+</template>

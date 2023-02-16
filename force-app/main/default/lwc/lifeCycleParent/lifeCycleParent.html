@@ -1,0 +1,19 @@
+<template>
+  <lightning-card title="Lifecycle Hooks">
+    <div class="slds-m-around_medium">
+      <div>This is my parent component</div>
+      <lightning-input type="text" value={input} onkeyup={changeHandler}>
+      </lightning-input>
+      <div>Enter value is : {input}</div>
+
+      <lightning-button
+        variant="brand"
+        label="Show Child"
+        onclick={childHandler}
+      ></lightning-button>
+      <template if:true={showChild}
+        ><c-life-cycle-child></c-life-cycle-child
+      ></template>
+    </div>
+  </lightning-card>
+</template>

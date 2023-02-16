@@ -1,0 +1,31 @@
+<template>
+  <lightning-card title="My Car Intro ">
+    <div class="slds-m-left_medium">
+      <lightning-input
+        type="text"
+        label="Enter your car make"
+        onkeyup={handleChangeMake}
+        value={carMake}
+      ></lightning-input>
+
+      <lightning-input
+        type="text"
+        label="Enter your car model"
+        onkeyup={handleChangeModel}
+        value={carModel}
+      ></lightning-input>
+
+      <lightning-input
+        type="text"
+        label="Enter your car year"
+        onkeyup={handleChangeYear}
+        value={carYear}
+      ></lightning-input>
+
+      <div class="slds-m-top_small">
+        My car make is {myCar.carMake},model is {myCar.carModel},and the car
+        year is {myCar.carYear}.
+      </div>
+    </div>
+  </lightning-card>
+</template>

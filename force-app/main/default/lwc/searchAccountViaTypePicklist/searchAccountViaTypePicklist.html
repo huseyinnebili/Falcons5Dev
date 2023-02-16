@@ -1,0 +1,16 @@
+<template>
+  <lightning-card title="Search Account Via Type Picklist">
+    <div class="slds-m-around_medium">
+      <lightning-combobox
+        label="Select Any Option From Stage Picklist"
+        options={typeOptions}
+        value={selectedType}
+        onchange={changeHandler}
+      ></lightning-combobox>
+      <c-display-results
+        results={accounts}
+        columns={columns}
+      ></c-display-results>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,26 @@
+<template>
+  <lightning-card title="Record View Form New : Case" icon-name="standard:case">
+    <div class="slds-m-around_medium">
+      <lightning-record-view-form
+        object-api-name={objectApiName}
+        record-id={recordId}
+      >
+        <lightning-output-field
+          field-name={fields.type}
+        ></lightning-output-field>
+        <lightning-output-field
+          field-name={fields.origin}
+        ></lightning-output-field>
+        <lightning-output-field
+          field-name={fields.priority}
+        ></lightning-output-field>
+        <lightning-output-field
+          field-name={fields.status}
+        ></lightning-output-field>
+        <lightning-output-field
+          field-name={fields.reason}
+        ></lightning-output-field>
+      </lightning-record-view-form>
+    </div>
+  </lightning-card>
+</template>

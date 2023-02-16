@@ -1,0 +1,21 @@
+<template>
+  <lightning-card title="Multiplication Two Numbers">
+    <div class="slds-m-left_small">
+      <lightning-input
+        type="number"
+        name="num1"
+        value={num1}
+        label="Enter a number"
+        onkeyup={changeHandler}
+      ></lightning-input>
+      <lightning-input
+        type="number"
+        name="num2"
+        value={num2}
+        label="Enter a number"
+        onkeyup={changeHandler}
+      ></lightning-input>
+      <div class="slds-m-top_small">{num1}*{num2}={total}</div>
+    </div>
+  </lightning-card>
+</template>

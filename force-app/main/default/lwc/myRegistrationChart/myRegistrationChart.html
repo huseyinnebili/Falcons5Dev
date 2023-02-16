@@ -1,0 +1,22 @@
+<template>
+  <lightning-card title="My Login Chart">
+    <div class="slds-m-left_medium">
+      <lightning-input
+        type="text"
+        label="Enter your email id"
+        onkeyup={handleEmail}
+        value={email}
+      >
+      </lightning-input>
+
+      <lightning-input
+        type="password"
+        label="Enter your password"
+        onkeyup={handlePassword}
+        value={password}
+      >
+      </lightning-input>
+      <div>Your email id is {email}.</div>
+    </div>
+  </lightning-card>
+</template>

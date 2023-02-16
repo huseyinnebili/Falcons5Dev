@@ -1,0 +1,16 @@
+<template>
+  <lightning-card title="Search Accounts">
+    <div class="slds-m-around_medium">
+      <lightning-input
+        type="search"
+        label="Start entering keywords to search for account"
+        onkeyup={searchHandler}
+      >
+      </lightning-input>
+      <c-display-results
+        results={accounts}
+        columns={columns}
+      ></c-display-results>
+    </div>
+  </lightning-card>
+</template>

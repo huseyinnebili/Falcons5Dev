@@ -1,0 +1,50 @@
+<apex:page standardController="Account" recordSetVar="Cs" extensions="ListViewController" lightningStylesheets="True">
+ <html>
+  <head>
+     <apex:includeLightning />
+  </head>
+  <body class="slds-scope">
+     <div id="flowContainer" />
+     <script>
+         var statusChange = function (event) {
+           if(event.getParam("status") === "FINISHED") {
+              // Control what happens when the interview finishes
+
+              var outputVariables = event.getParam("outputVariables");
+              var key;
+              for(key in outputVariables) {
+                  console.log(JSON.stringify(outputVariables[key]));
+                 if(outputVariables[key].name === "myOutput") {
+                     
+                    // Do something with an output variable
+                 }
+              }
+           }
+        };
+        $Lightning.use("c:ListViewApp", function() {
+           // Create the flow component and set the onstatuschange attribute
+            var AccountIds = '{!LstSelectedAccounts}';
+            if(AccountIds == '[]'){
+                AccountIds = '';
+                }
+            console.log('AccountIds '+AccountIds);
+            
+           $Lightning.createComponent("lightning:flow", {"onstatuschange":statusChange,"AccountIds" : AccountIds },
+              "flowContainer",
+              function (component) {
+                  
+                 // Set the input variables
+				var inputVariables = [
+                    { name : "AccountIds", type : "String", value: AccountIds }
+                ];
+                 // Start an interview in the flowContainer div, and 
+                 // initializes the input variables.
+                 component.startFlow("Create_Opportunity",inputVariables);
+                 component
+              }
+           );
+        });
+     </script>
+  </body>
+</html>
+</apex:page>

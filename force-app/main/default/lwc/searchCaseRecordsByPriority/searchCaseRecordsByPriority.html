@@ -1,0 +1,28 @@
+<template>
+  <lightning-card
+    title="Search Records By Priority : Case"
+    icon-name="standard:case"
+  >
+    <div class="slds-m-around_medium">
+      <lightning-input
+        value={searchWord}
+        label="Enter your Case Record prioriy you wish"
+        onkeyup={searchHandler}
+        type="search"
+      ></lightning-input>
+
+      <template if:true={cases}>
+        <div><strong>Search Results : </strong></div>
+        <template for:each={cases} for:item="cas">
+          <div key={cas.id} class="slds-m-bottom_small">
+            <strong>Case Origin : </strong>{cas.Origin}<br />
+            <strong>Case Reason : </strong>{cas.Reason}<br />
+            <strong>Contact Email : </strong>{cas.ContactEmail}<br />
+            <strong>Priority : </strong>{cas.Priority}<br />
+            <strong>Status : </strong>{cas.Status}<br />
+          </div>
+        </template>
+      </template>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,17 @@
+<template>
+  <lightning-card title="Get Object Info Opportunity">
+    <div class="slds-m-around_medium">
+      Default(Home Appliances) Record Type ID:{homeRecordTypeId} Kitchen
+      Appliances Record Type ID:{kitchenRecordTypeId}
+    </div>
+
+    <div class="slds-m-around_medium">
+      <lightning-combobox
+        options={picklistValue.data.values}
+        label="Select the type"
+        value={value}
+      >
+      </lightning-combobox>
+    </div>
+  </lightning-card>
+</template>

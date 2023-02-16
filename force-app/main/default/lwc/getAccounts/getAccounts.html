@@ -1,0 +1,13 @@
+<!-- sldsValidatorIgnore -->
+<template>
+  <lightning-card title="Get Records" icon-name="standard:account">
+    <div class="slds-m-around_medium">
+      <lightning-datatable
+        key-field="Id"
+        data={accounts.data}
+        columns={columns}
+      >
+      </lightning-datatable>
+    </div>
+  </lightning-card>
+</template>

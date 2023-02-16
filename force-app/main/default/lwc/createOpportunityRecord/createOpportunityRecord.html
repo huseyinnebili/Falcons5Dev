@@ -1,0 +1,35 @@
+<template>
+  <lightning-card title="Create Record : Opportunity">
+    <div class="slds-m-around_medium">
+      <form class="createOpp">
+        <lightning-input
+          label="Opportunity Name"
+          name="Name"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <lightning-input
+          label="Close Date"
+          name="CloseDate"
+          type="date"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <lightning-input
+          label="Stage"
+          name="StageName"
+          type="String[]"
+          onkeyup={changeHandler}
+        ></lightning-input>
+
+        <div class="slds-m-top_medium slds-align_absolute-center">
+          <lightning-button
+            label="Save Opportunity"
+            variant="brand"
+            onclick={createOpportunity}
+          ></lightning-button>
+        </div>
+      </form>
+    </div>
+  </lightning-card>
+</template>

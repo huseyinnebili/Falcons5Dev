@@ -1,0 +1,25 @@
+<template>
+  <lightning-card title="Imprative Apex">
+    <div class="slds-m-around_medium">
+      <lightning-combobox
+        label="Select a type to Opps related to that... "
+        value={selectedType}
+        options={typeOptions}
+        onchange={changeHandler}
+      ></lightning-combobox>
+      <template if:true={opps}>
+        <strong>SEARCH RESULTS : </strong>
+        <template for:each={opps} for:item="opp">
+          <div key={opp.id} class="slds-m-bottom_small">
+            <strong>Name : </strong>{opp.Name}<br />
+            <strong>Close Date : </strong>{opp.CloseDate}<br />
+            <strong>Expected Revenue : </strong>{opp.ExpectedRevenue}<br />
+            <strong>Lead Source : </strong>{opp.LeadSource}<br />
+            <strong>Stage Name: </strong>{opp.StageName}<br />
+            <strong>Type: </strong>{opp.Type}<br />
+          </div>
+        </template>
+      </template>
+    </div>
+  </lightning-card>
+</template>

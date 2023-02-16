@@ -1,0 +1,42 @@
+<template>
+  <lightning-card title="Case Record Edit Form" icon-name="standard:case">
+    <div class="slds-m-around_medium">
+      <lightning-record-edit-form
+        object-api-name={objectApiName}
+        record-id={recordId}
+        onsuccess={showToast}
+      >
+        <lightning-input-field
+          field-name={fields.Origin}
+        ></lightning-input-field>
+        <lightning-input-field
+          field-name={fields.Reason}
+        ></lightning-input-field>
+        <lightning-input-field
+          field-name={fields.PotentialLiability}
+        ></lightning-input-field>
+        <lightning-input-field field-name={fields.Type}></lightning-input-field>
+        <lightning-input-field
+          field-name={fields.Status}
+        ></lightning-input-field>
+        <lightning-input-field
+          field-name={fields.ProductId}
+        ></lightning-input-field>
+
+        <div class="slds-align_absolute-center slds-m-top_medium">
+          <lightning-button
+            variant="neutral"
+            label="Cancel"
+            type="'reset"
+            class="slds-m-right_x-small"
+          ></lightning-button>
+          <lightning-button
+            variant="brand"
+            label="Save"
+            type="submit"
+          ></lightning-button>
+        </div>
+      </lightning-record-edit-form>
+    </div>
+  </lightning-card>
+</template>

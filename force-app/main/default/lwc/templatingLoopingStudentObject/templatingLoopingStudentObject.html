@@ -1,0 +1,12 @@
+<template>
+  <lightning-card title="Templating Looping Student">
+    <div class="slds-m-around_small">
+      <template for:each={students} for:item="student">
+        <div key={student.id} class="slds-m-bottom_small">
+          <strong>Student Name: </strong>{student.studentName} <br />
+          <strong>Branch Name:</strong>{student.branchName}<br />
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>

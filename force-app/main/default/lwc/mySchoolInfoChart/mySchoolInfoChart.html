@@ -1,0 +1,43 @@
+<template>
+  <lightning-card title="My School Info Chart">
+    <div class="slds-m-around_medium">
+      <lightning-button
+        variant="brand"
+        label="Show Content"
+        title="Brand action"
+        onclick={handleClick}
+      >
+      </lightning-button>
+    </div>
+
+    <template if:true={showContent}>
+      <div class="slds-m-top_medium">
+        <lightning-input
+          type="text"
+          label="Enter your school name"
+          value={mySchool.graduatedSchool}
+          onkeyup={handleChange}
+        ></lightning-input>
+      </div>
+
+      <div class="slds-m-left_small">
+        My graduated school is {mySchool.graduatedSchool}.
+        <br />
+        My graduated year is {mySchool.graduatedSchool}.
+        <br />
+        My graduated degree is {mySchool.graduatedDegree}.
+      </div>
+
+      <div class="slds-m-left_small">
+        <lightning-input
+          type="text"
+          label="Enter your favourite snacks"
+          value={mySnackList}
+          onkeyup={handleSnack}
+        ></lightning-input>
+
+        <div>My favourite snacks are {mySnackList}.</div>
+      </div>
+    </template>
+  </lightning-card>
+</template>

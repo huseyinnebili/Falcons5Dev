@@ -1,0 +1,12 @@
+<template>
+  <div class="slds-m-top_medium">
+    <template if:true={results}>
+      <strong>RESULTS :</strong>
+      <lightning-datatable
+        key-field="Id"
+        data={results}
+        columns={columns}
+      ></lightning-datatable>
+    </template>
+  </div>
+</template>

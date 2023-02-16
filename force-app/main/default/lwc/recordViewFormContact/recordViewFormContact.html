@@ -1,0 +1,34 @@
+<template>
+  <lightning-card
+    title="Lightning Contact View Form"
+    icon-name="standard:contact"
+  >
+    <div class="slds-m-around_medium">
+      <lightning-record-view-form
+        record-id={recordId}
+        object-api-name={objectName}
+      >
+        <template if:true={showContent}>
+          <lightning-output-field
+            field-name={fields.firstName}
+          ></lightning-output-field>
+          <lightning-output-field
+            field-name={fields.lastName}
+          ></lightning-output-field>
+          <lightning-output-field
+            field-name={fields.accountName}
+          ></lightning-output-field>
+          <lightning-output-field
+            field-name={fields.title}
+          ></lightning-output-field>
+          <lightning-output-field
+            field-name={fields.phone}
+          ></lightning-output-field>
+          <lightning-output-field
+            field-name={fields.department}
+          ></lightning-output-field>
+        </template>
+      </lightning-record-view-form>
+    </div>
+  </lightning-card>
+</template>

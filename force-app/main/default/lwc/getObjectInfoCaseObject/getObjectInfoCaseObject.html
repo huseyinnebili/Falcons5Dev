@@ -1,0 +1,16 @@
+<template>
+  <lightning-card title="Get Picklist Value : Case">
+    <div class="slds-m-around_medium">
+      <lightning-combobox
+        name="progress"
+        label="Priority"
+        value={value}
+        placeholder="Select Priority"
+        options={priorityOptions}
+        onchange={handleChange}
+      ></lightning-combobox>
+
+      <p>Selected value is: <strong>{value}</strong></p>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,27 @@
+<template>
+  <lightning-card
+    title="Search Opportunity Records Through Searchkey"
+    icon-name="standard:opportunity"
+  >
+    <div class="slds-m-around_medium">
+      <lightning-input
+        value={searchWord}
+        lable="Enter your keyword to search Opportunity Record"
+        onkeyup={searchHandler}
+        type="search"
+      >
+      </lightning-input>
+
+      <div><strong>Search Results : </strong></div>
+      <template for:each={opportunities} for:item="opp">
+        <div key={opp.id} class="slds-m-bottom_small">
+          <strong>Name : </strong>{opp.Name}<br />
+          <strong>Close Date : </strong>{opp.CloseDate}<br />
+          <strong>Expected Revenue : </strong>{opp.ExpectedRevenue}<br />
+          <strong>Lead Source : </strong>{opp.LeadSource}<br />
+          <strong>Stage Name : </strong>{opp.StageName}<br />
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>

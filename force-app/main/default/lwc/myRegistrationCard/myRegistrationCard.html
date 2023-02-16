@@ -1,0 +1,49 @@
+<template>
+  <lightning-card title="My Registration Card">
+    <div class="slds-m-around_medium">
+      <lightning-input
+        type="text"
+        label="Enter your username"
+        value={username}
+        name="username"
+        onkeyup={changeHandler}
+      >
+      </lightning-input>
+
+      <lightning-input
+        type="password"
+        label="Enter your password"
+        name="password"
+        value={password}
+        onkeyup={changeHandler}
+      >
+      </lightning-input>
+
+      <lightning-input
+        type="number"
+        label="Enter your age"
+        name="age"
+        value={age}
+        onkeyup={changeHandler}
+      >
+      </lightning-input>
+      <lightning-combobox
+        name="gender"
+        label="Select your gender"
+        value={gender}
+        options={genders}
+        onchange={handleChange}
+      >
+      </lightning-combobox>
+      <div class="slds-m-left_medium">
+        Your username is {username}.
+        <br />
+        Your password is {password}.
+        <br />
+        Your gender is {gender}.
+        <br />
+        Your age is {age}.
+      </div>
+    </div>
+  </lightning-card>
+</template>

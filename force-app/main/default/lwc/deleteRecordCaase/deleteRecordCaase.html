@@ -1,0 +1,20 @@
+<template>
+  <lightning-card title="Delete Record : Case " icon-name="standard:case">
+    <div class="slds-m-around_medium">
+      <form class="caseRecord">
+        <lightning-input
+          type="text"
+          label="Enter the record in order to get it deleted"
+          onchange={changeHandler}
+          class="slds-m-bottom_small"
+        ></lightning-input>
+
+        <lightning-button
+          variant="destructive"
+          label="Delete"
+          onclick={deleteRec}
+        ></lightning-button>
+      </form>
+    </div>
+  </lightning-card>
+</template>

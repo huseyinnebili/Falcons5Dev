@@ -1,0 +1,11 @@
+<template>
+  <lightning-card title="Get Case Record By Priority">
+    <div class="slds-m-around_medium">
+      <lightning-datatable
+        key-field="Id"
+        data={cases.data}
+        columns={columns}
+      ></lightning-datatable>
+    </div>
+  </lightning-card>
+</template>

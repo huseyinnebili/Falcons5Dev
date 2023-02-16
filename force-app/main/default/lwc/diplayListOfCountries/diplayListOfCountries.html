@@ -1,0 +1,7 @@
+<template>
+  <lightning-card title="Display the Countries">
+    <template for:each={countries} for:item="country">
+      <div key={country} class="slds-m-left_small">{country}</div>
+    </template>
+  </lightning-card>
+</template>

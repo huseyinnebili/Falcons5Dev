@@ -1,0 +1,20 @@
+<template>
+  <lightning-card title="C2P Communication Two">
+    <div class="slds-m-around_medium">
+      <div>
+        This is parent component used to display small details.If user needs
+        more details ,we can route them to model popup
+      </div>
+    </div>
+
+    <lightning-button
+      label="Show Details"
+      variant="brand"
+      onclick={showHandler}
+    ></lightning-button>
+
+    <template if:true={showModal}>
+      <c-child-modal-two onclose={parentCloseHandler}></c-child-modal-two>
+    </template>
+  </lightning-card>
+</template>

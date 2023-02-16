@@ -1,0 +1,12 @@
+<template>
+  <lightning-card title="Tempaleting Loop Two">
+    <div class="slds-m-around_medium">
+      <template for:each={accounts} for:item="account">
+        <div key={account.id} class="slds-m-bottom_small">
+          <strong>Name:</strong>{account.name} <br />
+          <strong>Type:</strong>{account.type}
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>
