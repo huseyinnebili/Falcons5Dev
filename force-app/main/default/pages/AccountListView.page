@@ -1,4 +1,4 @@
-<apex:page standardController="Account" recordSetVar="Cs" extensions="ListViewController" lightningStylesheets="True">
+<apex:page standardController="Subscription__c" recordSetVar="Cs" extensions="ListViewController" lightningStylesheets="True">
  <html>
   <head>
      <apex:includeLightning />
@@ -23,24 +23,23 @@
         };
         $Lightning.use("c:ListViewApp", function() {
            // Create the flow component and set the onstatuschange attribute
-            var AccountIds = '{!LstSelectedAccounts}';
-            if(AccountIds == '[]'){
-                AccountIds = '';
-                }
-            console.log('AccountIds '+AccountIds);
+            var SubscriptionIds = '{!LstSelectedAccounts}';
+            var AccountId = '{!accountId}';
+            console.log('AccountIds '+AccountId);
+            console.log('subscriptionIds '+SubscriptionIds);
             
-           $Lightning.createComponent("lightning:flow", {"onstatuschange":statusChange,"AccountIds" : AccountIds },
+           $Lightning.createComponent("lightning:flow", {"onstatuschange":statusChange },
               "flowContainer",
               function (component) {
                   
                  // Set the input variables
 				var inputVariables = [
-                    { name : "AccountIds", type : "String", value: AccountIds }
+                    { name : "SubscriptionIds", type : "String", value: SubscriptionIds },
+                    { name : "AccountId", type : "String", value: AccountId }
                 ];
                  // Start an interview in the flowContainer div, and 
                  // initializes the input variables.
                  component.startFlow("Create_Opportunity",inputVariables);
-                 component
               }
            );
         });
